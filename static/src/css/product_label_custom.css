@@ -1,0 +1,19 @@
+@media print {
+    .sheet.2x4_99x67 {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sheet.2x4_99x67 .label {
+        width: 99.1mm;
+        height: 67.7mm;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 5mm;
+        overflow: hidden;
+    }
+}
