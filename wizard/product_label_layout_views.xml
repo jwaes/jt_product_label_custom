@@ -3,7 +3,7 @@
     <record id="view_product_label_layout_form_custom" model="ir.ui.view">
         <field name="name">product.label.layout.form.custom</field>
         <field name="model">product.label.layout</field>
-        <field name="inherit_id" ref="product.view_product_label_layout_form"/>
+        <field name="inherit_id" ref="product.product_label_layout_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='print_format']" position="attributes">
                 <attribute name="widget">selection</attribute>
