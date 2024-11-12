@@ -15,15 +15,16 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Product',
-    'version': '0.1',
+    'version': '0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['product'],
 
     # always loaded
     'data': [
-        'wizards/product_label_layout_views.xml',
-        'reports/product_label_report_templates.xml',
+        'wizard/product_label_layout_views.xml',
+        'report/product_label_paperformat.xml',
+        'report/product_label_report_templates.xml',
     ],
     'assets': {
         'web.report_assets_common': [

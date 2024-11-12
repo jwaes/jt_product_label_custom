@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_product_label_custom" inherit_id="product.report_product_label">
+        <xpath expr="//t[@t-name='product.report_product_label']" position="inside">
+            <t t-if="o.label_type == '99x67_2x4'">
+                <t t-set="page_params" t-value="o._get_label_layout()['99x67_2x4']"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>
