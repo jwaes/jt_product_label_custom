@@ -26,11 +26,11 @@
         'report/product_label_paperformat.xml',
         'report/product_label_report_templates.xml',
     ],
-    'assets': {
-        'web.report_assets_common': [
-            'product_label_custom/static/src/css/product_label_custom.css',
-        ],
-    },
+    # 'assets': {
+    #     'web.report_assets_common': [
+    #         'product_label_custom/static/src/css/product_label_custom.css',
+    #     ],
+    # },
     'installable': True,
     'application': False,
 }
