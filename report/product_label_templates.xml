@@ -42,7 +42,7 @@
                 <t t-set="report_to_call" t-value="'4x12'" />
             </t>
         </xpath>
-        <xpath expr="//t[@t-elif='report_to_call == '4x12']" position="after">
+        <xpath expr="//t[@t-elif=\"report_to_call == '4x12'\"]" position="after">
             <t t-call="jt_product_label_custom.report_simple_label2x4"/>
         </xpath>
     </template>

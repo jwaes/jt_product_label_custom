@@ -1,4 +1,7 @@
+import logging
 from odoo import models, fields, api
+
+_logger = logging.getLogger(__name__)
 
 class ProductLabelLayout(models.TransientModel):
     _inherit = 'product.label.layout'
@@ -12,10 +15,14 @@ class ProductLabelLayout(models.TransientModel):
     def process(self):
         self.ensure_one()
 
+        _logger.info('custom label processing')
+
         if self.print_format == '2x4':
+            _logger.info('custom label processing, print_format is 2x4')
             xml_id = 'jt_product_label_custom.report_product_template_label_2x4'
             data = self._prepare_report_data_only()
         else:
+            _logger.info('custom label processing, print_format is %s', self.print_format)
             # Use the default process method for other formats
             return super(ProductLabelLayout, self).process()
 
