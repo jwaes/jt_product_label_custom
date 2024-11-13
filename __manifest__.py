@@ -22,15 +22,10 @@
 
     # always loaded
     'data': [
-        # 'wizard/product_label_layout_views.xml',
         'report/product_label_paperformat.xml',
-        # 'report/product_label_report_templates.xml',
+        'report/product_label_reports.xml',
+        'report/product_label_templates.xml',
     ],
-    # 'assets': {
-    #     'web.report_assets_common': [
-    #         'product_label_custom/static/src/css/product_label_custom.css',
-    #     ],
-    # },
     'installable': True,
     'application': False,
 }

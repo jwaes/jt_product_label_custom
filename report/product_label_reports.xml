@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+    id="report_product_template_label_2x4"
+    model="product.label.layout"
+    string="Product Labels 2 x 4"
+    report_type="qweb-pdf"
+    name="product.report_product_template_label_2x4"
+    file="product.report_product_template_label_2x4"
+    print_report_name="'Product Labels - %s' % (object.print_format)"
+    attachment_use="False"
+/>
+
+</odoo>

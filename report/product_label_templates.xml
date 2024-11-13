@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_product_template_label_2x4">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="doc"/>
+            <t t-set="paperformat_id" t-value="ref('product_label_custom.paperformat_product_label_2x4')"/>
+            <div class="page">
+                <!-- Your label layout -->
+                 <h1>fooo</h1>
+            </div>
+        </t>
+    </template>
+</odoo>
