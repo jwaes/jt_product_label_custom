@@ -15,7 +15,7 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Product',
-    'version': '0.9',
+    'version': '0.10',
 
     # any module necessary for this one to work correctly
     'depends': ['product'],
@@ -24,7 +24,7 @@
     'data': [
         'report/product_label_paperformat.xml',
         'report/product_label_reports.xml',
-        'report/product_label_templates.xml',
+        # 'report/product_label_templates.xml',
     ],
     'installable': True,
     'application': False,

@@ -21,6 +21,12 @@ class ProductLabelLayout(models.TransientModel):
 
         return self.env.ref(xml_id).report_action(None, data=data, config=False)
 
+
+        report_action = self.env.ref(xml_id).report_action(None, data=data, config=False)
+        report_action.update({'close_on_report_download': True})
+        return report_action
+
+
     def _prepare_report_data_only(self):
 
         active_model = ''

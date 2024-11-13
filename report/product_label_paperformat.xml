@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="paperformat_label_99x67_2x4" model="report.paperformat">
-        <field name="name">2 x 4 (99.1 x 67.7 mm)</field>
+        <field name="name">A4 Label Sheet 2 x 4 (99.1 x 67.7 mm)</field>
         <field name="default" eval="False"/>
         <field name="format">custom</field>
         <field name="page_height">297</field>
@@ -11,6 +11,7 @@
         <field name="margin_left">4</field>
         <field name="margin_right">4</field>
         <field name="orientation">Portrait</field>
+        <field name="disable_shrinking" eval="True"/>
         <field name="dpi">90</field>
     </record>
 </odoo>
