@@ -13,7 +13,7 @@
 
     <template id="report_simple_label2x4">
         <t t-set="barcode_size" t-value="'width:33mm;height:8mm'"/>
-        <t t-set="table_style" t-value="'width:98mm;height:68mm;' + table_style"/>
+        <t t-set="table_style" t-value="'width:90mm;height:60mm;' + table_style"/>
         <td t-att-style="make_invisible and 'visibility:hidden;'" >
             <div class="o_label_full" t-att-style="table_style">
                 <div class="o_label_name">
@@ -38,8 +38,9 @@
     <template id="report_productlabel" inherit_id="product.report_productlabel">
         <xpath expr="/t/t/t[@t-if][last()]" position="after">
             <t t-if="columns == 2 and rows == 4">
-                <t t-set="padding_page" t-value="'padding: 13mm 4mm'" />
+                <t t-set="padding_page" t-value="'padding: 0'" />
                 <t t-set="report_to_call" t-value="'4x12'" />
+                <h1>fooo</h1>
             </t>
         </xpath>
         <xpath expr="//t[@t-elif][last()]" position="after">
