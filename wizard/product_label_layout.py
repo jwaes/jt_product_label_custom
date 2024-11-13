@@ -13,7 +13,7 @@ class ProductLabelLayout(models.TransientModel):
         self.ensure_one()
 
         if self.print_format == '2x4':
-            xml_id = 'product_label_custom.report_product_template_label_2x4'
+            xml_id = 'jt_product_label_custom.report_product_template_label_2x4'
             data = self._prepare_report_data_only()
         else:
             # Use the default process method for other formats
