@@ -3,10 +3,25 @@
     <template id="report_product_template_label_2x4">
         <t t-call="web.external_layout">
             <t t-set="o" t-value="doc"/>
-            <t t-set="paperformat_id" t-value="ref('product_label_custom.paperformat_product_label_2x4')"/>
             <div class="page">
-                <!-- Your label layout -->
-                 <h1>fooo</h1>
+                <!-- Your custom label layout goes here -->
+                <div class="label-sheet">
+                    <t t-foreach="range(0, 4)" t-as="row">
+                        <div class="row">
+                            <t t-foreach="range(0, 2)" t-as="col">
+                                <div class="label" style="width:99.1mm; height:67.7mm;">
+                                    <!-- Label content -->
+                                    <t t-foreach="o.product_ids or o.product_tmpl_ids" t-as="product">
+                                        <div>
+                                            <span t-field="product.name"/>
+                                            <!-- Add more fields as needed -->
+                                        </div>
+                                    </t>
+                                </div>
+                            </t>
+                        </div>
+                    </t>
+                </div>
             </div>
         </t>
     </template>

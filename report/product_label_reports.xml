@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <report
-    id="report_product_template_label_2x4"
-    model="product.label.layout"
-    string="Product Labels 2 x 4"
-    report_type="qweb-pdf"
-    name="product.report_product_template_label_2x4"
-    file="product.report_product_template_label_2x4"
-    print_report_name="'Product Labels - %s' % (object.print_format)"
-    attachment_use="False"
-/>
-
+        id="report_product_template_label_2x4"
+        model="product.label.layout"
+        string="Product Labels 2 x 4 (99.1 x 67.7 mm)-"
+        report_type="qweb-pdf"
+        name="product_label_custom.report_product_template_label_2x4"
+        file="product_label_custom.report_product_template_label_2x4"
+        print_report_name="'Product Labels - %s' % (object.print_format)"
+        attachment_use="False"
+    />
 </odoo>
