@@ -36,7 +36,7 @@
 
 
     <template id="report_productlabel" inherit_id="product.report_productlabel">
-        <xpath expr="//t[@t-if=columns == 4 and rows == 12']" position="after">
+        <xpath expr="//t[@t-if='columns == 4 and rows == 12']" position="after">
             <t t-if="columns == 2 and rows == 4">
                 <t t-set="padding_page" t-value="'padding: 13mm 4mm'" />
                 <t t-set="report_to_call" t-value="'4x12'" />
