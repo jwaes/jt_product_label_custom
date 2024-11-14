@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="report_product_template_label_2x4" model="ir.actions.report">
-        <field name="name">Product Label 2x7 (PDF)</field>
+        <field name="name">Product Label 2x4 (PDF)</field>
         <field name="model">product.template</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">jt_product_label_custom.report_producttemplatelabel2x4</field>

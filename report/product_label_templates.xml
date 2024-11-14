@@ -12,18 +12,36 @@
     </template>
 
     <template id="report_simple_label2x4">
-        <t t-set="barcode_size" t-value="'width:33mm;height:8mm'"/>
-        <t t-set="table_style" t-value="'width:90mm;height:60mm;' + table_style"/>
-        <td t-att-style="make_invisible and 'visibility:hidden;'" >
+        <t t-set="barcode_size" t-value="'width:50mm;height:14mm'"/>
+        <t t-set="table_style" t-value="'width:91mm;height:69mm;'"/>
+        <td t-att-style="make_invisible and 'visibility:hidden;'">
             <div class="o_label_full" t-att-style="table_style">
-                <div class="o_label_name">
+                
+                
+            <div class="row">
+                <div class="col-4">
+                    <img class="img-fluid" src="/jt_repeat_products/static/src/img/EauzonLogo.png"/>
+                </div>
+                <div class="col-auto">
+
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="/jt_repeat_products/static/src/img/RepeatLogo.png"/>
+                </div>
+            </div>
+            
+            
+                <div class="o_label_name bg-transparent mx-2 my-4">
                     <strong t-field="product.display_name"/>
                 </div>
-                <div class="text-end" style="padding-top:0;padding-bottom:0">
-                    <strong class="o_label_price_medium" t-out="pricelist._get_product_price(product, 1, pricelist.currency_id or product.currency_id)"
-                            t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id or product.currency_id, 'label_price': True}"/>
-                </div>
-                <div class= "text-center o_label_small_barcode">
+
+                <div class="text-end" style="line-height:normal">
+                    <div class="o_label_extra_data">
+                        <t t-out="extra_html"/>
+                    </div>
+                </div>   
+                             
+                <div class="text-center o_label_small_barcode">
                     <span class="text-nowrap" t-field="product.default_code"/>
                     <t t-if="barcode">
                         <div t-out="barcode" style="padding:0" t-options="{'widget': 'barcode', 'symbology': 'auto', 'img_style': barcode_size}"/>
@@ -36,11 +54,10 @@
 
 
     <template id="report_productlabel" inherit_id="product.report_productlabel">
-        <xpath expr="/t/t/t[@t-if][last()]" position="after">
+        <xpath expr="//t[@t-if='columns == 4 and rows == 12']" position="after">
             <t t-if="columns == 2 and rows == 4">
-                <t t-set="padding_page" t-value="'padding: 0'" />
-                <t t-set="report_to_call" t-value="'4x12'" />
-                <h1>fooo</h1>
+                <t t-set="padding_page" t-value="'padding: 6mm 0mm'"/>
+                
             </t>
         </xpath>
         <xpath expr="//t[@t-elif][last()]" position="after">
