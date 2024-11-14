@@ -35,12 +35,12 @@
                     <strong t-field="product.display_name"/>
                 </div>
 
-                <div class="text-end" style="line-height:normal">
-                    <div class="o_label_extra_data">
+                <div  style="line-height:normal">
+                    <div>
                         <t t-out="extra_html"/>
                     </div>
-                </div>   
-                             
+                </div> 
+
                 <div class="text-center o_label_small_barcode">
                     <span class="text-nowrap" t-field="product.default_code"/>
                     <t t-if="barcode">
