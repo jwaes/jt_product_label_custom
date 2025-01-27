@@ -32,7 +32,7 @@
             
             
                 <div class="o_label_name bg-transparent mx-2 my-4">
-                    <strong t-field="product.display_name"/>
+                    <strong t-field="product.with_context(display_default_code=False).display_name"/>
                 </div>
 
                 <div  style="line-height:normal">
